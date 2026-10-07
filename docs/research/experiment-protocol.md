@@ -14,6 +14,10 @@
    approved research step, not part of basic launch validation.
 6. Verify every downloaded artifact before execution.
 7. Make setup changes reversible and record the rollback result.
+8. Never disable or bypass platform or device security controls to make a test
+   pass.
+9. Obtain explicit approval before an application/runtime installation or
+   system-level change.
 
 ## Test progression
 

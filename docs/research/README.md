@@ -56,3 +56,5 @@ Phase 1 completes only when:
 - VAC-secure matchmaking is tested without modifying protected files, or is
   explicitly classified as unsupported with the product impact documented;
 - open blockers have owners and do not invalidate Milestone 0 (`doctor`).
+- results are expressed as a support matrix, not assumptions derived from one
+  developer machine.

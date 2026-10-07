@@ -15,7 +15,7 @@ criteria are met.
 - [Research plan](research/README.md)
 - [Initial findings](research/initial-findings.md)
 - [Execution route comparison](research/execution-routes.md)
-- [Sanitized target machine](research/target-machine.md)
+- [Support matrix](research/support-matrix.md)
 - [Research backlog](research/backlog.md)
 - [Experiment protocol](research/experiment-protocol.md)
 - [Provisional system design](architecture/system-design.md)

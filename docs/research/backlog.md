@@ -6,10 +6,12 @@ Priority is ordered by what can invalidate the product earliest.
 
 ## P0 — feasibility blockers
 
-- [x] Inventory the test Mac without persisting personal or device identifiers.
+- [ ] Define sanitized host-inventory fields and test them on representative
+  Apple Silicon fixtures without committing data from personal machines.
 - [x] Compare macOS, Linux VM, and bare-metal Linux at the architectural level.
-- [ ] Install/test CrossOver 26.3 only with explicit user approval and use it as
-  a reference baseline; do not redistribute or inspect proprietary components.
+- [ ] Install/test CrossOver 26.3 only after separate explicit approval and use
+  it as a reference baseline; do not redistribute or inspect proprietary
+  components.
 - [ ] Identify a candidate Wine build whose architecture and exported macOS
   driver APIs satisfy the selected DXMT build.
 - [ ] Record upstream source, version/commit, license, signature/checksum, and

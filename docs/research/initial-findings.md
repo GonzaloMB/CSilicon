@@ -88,10 +88,10 @@ gaming path CS2 needs. The Metal-accelerated paravirtualized GPU is documented
 for macOS guests, not Linux guests.
 
 Bare-metal Fedora Asahi Remix provides the relevant architecture: Linux on the
-hardware, Vulkan drivers, FEX, and `muvm`. However, the current target machine
-is an M4 Pro MacBook Pro (`Mac16,8`), for which Asahi currently lists no
-installer and no GPU support. Therefore neither Linux VM nor bare-metal Linux
-is a viable CSilicon runtime for this machine today.
+hardware, Vulkan drivers, FEX, and `muvm`. Its feature availability varies by
+Mac generation, and it requires booting another operating system. It therefore
+cannot provide a consistent “run from macOS” architecture across CSilicon's
+intended Apple Silicon support matrix.
 
 **Evidence:** primary — [Steam for Linux requirements](https://github.com/ValveSoftware/steam-for-linux/blob/master/README.md), [Apple Linux VM graphics](https://developer.apple.com/videos/play/wwdc2022/10002/), [Asahi gaming architecture](https://asahilinux.org/2024/10/aaa-gaming-on-asahi-linux/), [Asahi M4 support](https://asahilinux.org/docs/platform/feature-support/m4/)
 

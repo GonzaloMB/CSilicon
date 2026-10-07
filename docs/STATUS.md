@@ -22,8 +22,8 @@
 - AI is optional and cannot precede a stable non-AI workflow.
 - Linux in a macOS VM is not a viable graphics path with Apple's documented
   Virtio GPU 2D support.
-- Bare-metal Asahi Linux is not currently installable or GPU-capable on the
-  target M4 Pro MacBook Pro (`Mac16,8`).
+- Bare-metal Asahi Linux has a device-dependent support matrix and would
+  require leaving macOS, so it cannot be the general CSilicon runtime.
 
 ## Not established yet
 
@@ -42,7 +42,7 @@ first implementation milestone is authorized only after the Phase 1 gate in
 
 ## Next actions
 
-1. Establish CrossOver 26.3 as a reference baseline on the target Mac without
+1. Establish CrossOver 26.3 as one external reference baseline without
    changing or packaging its proprietary components.
 2. Record whether Steam, CS2, audio, input, rendering, and clean shutdown work.
 3. Validate game-file integrity before any online experiment.
@@ -50,3 +50,5 @@ first implementation milestone is authorized only after the Phase 1 gate in
    no injection, patching, hooking, or debugger attachment.
 5. Compare the working reference with candidate redistributable Wine/DXMT
    runtimes from trusted upstreams.
+6. Repeat validated experiments across the declared Apple Silicon support
+   matrix before making compatibility claims.

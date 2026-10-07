@@ -36,8 +36,9 @@ macOS / Apple Silicon
 
 The diagram is conceptual. Phase 1 must verify the precise CPU and process
 boundaries rather than encoding an assumed Rosetta topology. The Linux build
-was evaluated separately and rejected for the target M4 Pro because neither a
-Linux VM nor current bare-metal Asahi provides a supported accelerated route.
+was evaluated separately and rejected as the primary product route because a
+Linux VM lacks the documented accelerated graphics path and bare-metal Linux
+cannot provide a consistent experience from macOS across Mac generations.
 
 ## Architectural style
 

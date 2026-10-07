@@ -4,17 +4,17 @@
 **Decision date:** 2026-10-07
 
 The goal is full CS2 use, including Valve matchmaking/Premier, from the target
-Apple Silicon Mac. “Launches the menu” is insufficient. FACEIT is excluded:
+Apple Silicon Macs. “Launches the menu” is insufficient. FACEIT is excluded:
 its vendor currently supplies the required anti-cheat only for Windows 10/11,
 not macOS or Linux, and requires Windows platform-security features.
 
 ## Route comparison
 
-| Route | CPU/ABI path | Graphics path | Online status | Target M4 Pro |
+| Route | CPU/ABI path | Graphics path | Online status | Product fit |
 |---|---|---|---|---|
-| macOS + Windows CS2 | x86_64 Windows through Wine and Apple translation/FEX | D3D11 to DXMT/D3DMetal to Metal | VAC requires validation | viable candidate |
+| macOS + Windows CS2 | x86_64 Windows through Wine and Apple translation/FEX | D3D11 to DXMT/D3DMetal to Metal | VAC requires validation | selected candidate |
 | Linux VM on macOS | x86_64 Linux through translation in ARM Linux guest | documented Virtio GPU 2D | untested | reject for gaming |
-| Bare-metal Asahi + Linux CS2 | x86_64 Linux through FEX/muvm | Vulkan through Asahi GPU driver | VAC requires validation | unavailable today |
+| Bare-metal Asahi + Linux CS2 | x86_64 Linux through FEX/muvm | Vulkan through Asahi GPU driver | VAC requires validation | not a macOS-wide solution |
 | Remote Windows PC/cloud | native supported Windows host, streamed to Mac | remote GPU | provider/host dependent | outside local-first scope |
 
 ## Why the Linux build is not directly runnable on macOS
@@ -47,13 +47,13 @@ Asahi's gaming stack is technically relevant: its Vulkan driver plus FEX and
 `muvm` can run x86/x86_64 applications on ARM Linux. It also avoids translating
 D3D11 when using CS2's Linux/Vulkan build.
 
-The target `Mac16,8` uses an M4 Pro. Asahi's current support table lists no
-installer for M4 Pro/Max MacBook Pros, GPU support as TBA, and most required
-peripherals as TBA. This makes Asahi unavailable for the actual target machine,
-independently of CS2 or VAC behavior.
+Asahi support varies substantially by Apple Silicon generation and device.
+Even on supported systems, this route requires disk partitioning and rebooting
+out of macOS. It cannot satisfy a product promise that should work from macOS
+across multiple supported Mac families.
 
-**Decision:** keep Asahi as a monitored future route, not an implementation
-target. Do not partition the target Mac or run experimental installers.
+**Decision:** keep Asahi as a monitored alternative, not an implementation
+target for CSilicon's macOS runtime.
 
 ## Selected research route
 
