@@ -151,6 +151,8 @@ activemq-data/
 
 # Environments
 .env
+.env.*
+!.env.example
 .envrc
 .venv
 env/
@@ -158,6 +160,16 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+
+# Secrets and signing material
+*.pem
+*.key
+*.p12
+secrets/
+credentials/
+
+# macOS metadata
+.DS_Store
 
 # Spyder project settings
 .spyderproject
