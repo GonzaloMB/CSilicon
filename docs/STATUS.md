@@ -40,15 +40,22 @@ Produce a reproducible feasibility report from controlled experiments. The
 first implementation milestone is authorized only after the Phase 1 gate in
 [the roadmap](roadmap/phases.md) is satisfied.
 
+The CrossOver 26.3 reference artifact has been acquired from the official
+CodeWeavers distribution, checksum-verified, code-signature-verified, and
+accepted by Gatekeeper. An initial setup attempt was canceled before Steam
+authentication or any CS2 download, and the local reference environment was
+removed. No runtime feasibility result can be inferred from that attempt.
+
 ## Next actions
 
-1. Establish CrossOver 26.3 as one external reference baseline without
-   changing or packaging its proprietary components.
-2. Record whether Steam, CS2, audio, input, rendering, and clean shutdown work.
-3. Validate game-file integrity before any online experiment.
-4. Evaluate VAC-secure matchmaking separately, with explicit user consent and
+1. Repeat the time-limited CrossOver reference experiment on a dedicated test
+   host, without packaging proprietary components into CSilicon.
+2. Create a dedicated CS2 reference bottle for that experiment.
+3. Record whether Steam, CS2, audio, input, rendering, and clean shutdown work.
+4. Validate game-file integrity before any online experiment.
+5. Evaluate VAC-secure matchmaking separately, with explicit user consent and
    no injection, patching, hooking, or debugger attachment.
-5. Compare the working reference with candidate redistributable Wine/DXMT
+6. Compare the working reference with candidate redistributable Wine/DXMT
    runtimes from trusted upstreams.
-6. Repeat validated experiments across the declared Apple Silicon support
+7. Repeat validated experiments across the declared Apple Silicon support
    matrix before making compatibility claims.

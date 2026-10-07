@@ -9,9 +9,11 @@ Priority is ordered by what can invalidate the product earliest.
 - [ ] Define sanitized host-inventory fields and test them on representative
   Apple Silicon fixtures without committing data from personal machines.
 - [x] Compare macOS, Linux VM, and bare-metal Linux at the architectural level.
-- [ ] Install/test CrossOver 26.3 only after separate explicit approval and use
-  it as a reference baseline; do not redistribute or inspect proprietary
-  components.
+- [x] Acquire and validate the CrossOver 26.3 reference artifact from the
+  official vendor distribution; do not redistribute proprietary components.
+- [ ] Run its time-limited trial on a dedicated test host and create a dedicated
+  CS2 reference bottle. The first setup attempt was canceled before Steam
+  authentication or any CS2 download and produced no feasibility result.
 - [ ] Identify a candidate Wine build whose architecture and exported macOS
   driver APIs satisfy the selected DXMT build.
 - [ ] Record upstream source, version/commit, license, signature/checksum, and

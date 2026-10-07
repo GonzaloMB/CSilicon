@@ -16,6 +16,7 @@ criteria are met.
 - [Initial findings](research/initial-findings.md)
 - [Execution route comparison](research/execution-routes.md)
 - [Support matrix](research/support-matrix.md)
+- [CrossOver reference baseline](research/reference-baseline.md)
 - [Research backlog](research/backlog.md)
 - [Experiment protocol](research/experiment-protocol.md)
 - [Provisional system design](architecture/system-design.md)
